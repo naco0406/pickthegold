@@ -54,6 +54,7 @@ const Signup = () => {
           nickname: ""
         });
         setCookie("userClass", userClass, 7);
+        setCookie("currentBalance", 100000, 7);
         window.location.href = "/";
       })
       .catch(() => toast.error("뭔가 아주 잘못되었습니다!!!"));
