@@ -52,7 +52,7 @@ export default function RootLayout({
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentTime(new Date());
-      console.log(currentTime);
+      // console.log(currentTime);
     }, 1000);
 
     return () => clearInterval(intervalId);
@@ -61,7 +61,7 @@ export default function RootLayout({
   useEffect(() => {
     if (currentTime >= endTimes) {
       getUpdatedBalance().then((data) => {
-        console.log(data);
+        // console.log(data);
         setupdatedData(data);
       });
       setShowModal(true);
@@ -75,7 +75,7 @@ export default function RootLayout({
         const data = await getEndTimes(); // 서버에서 종료 시간 가져오기
         const newEndTime = new Date(data[0].end_time);
         console.log("서버 시간 읽어오기");
-        console.log(newEndTime);
+        // console.log(newEndTime);
         setEndTimes(newEndTime); // 새로운 종료 시간으로 상태 업데이트
       } catch (error) {
         console.error("Scheduled time update failed:", error);
