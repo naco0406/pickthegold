@@ -34,7 +34,7 @@ function getCookie(name) {
 }
 
 const ProjectItem = ({ project }: { project: Project }) => {
-  const { id, title, brief } = project;
+  const { id, title, brief, giturl } = project;
   const [bettingAmount, setBettingAmount] = useState(0);
   const { data: session } = useSession();
 
@@ -114,7 +114,7 @@ const ProjectItem = ({ project }: { project: Project }) => {
 
         <div className="px-4">
           <h3 className="mb-3.5 mt-7.5 line-clamp-2 inline-block text-lg font-medium text-black duration-300 hover:text-primary dark:text-white dark:hover:text-primary xl:text-itemtitle2">
-            <button onClick={openModal}>
+            <button onClick={() => window.open(giturl, '_blank')}>
               {`${title}`}
             </button>
           </h3>
