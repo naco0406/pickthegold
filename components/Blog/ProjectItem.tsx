@@ -105,7 +105,7 @@ const ProjectItem = ({ project }: { project: Project }) => {
       >
         <div className="relative block aspect-[368/239] rounded-lg overflow-hidden">
           <Image
-            src={`/images/week2/${id}.png`}
+            src={`/images/week3/${id}.png`}
             alt={title}
             layout="fill"
             objectFit="cover"
