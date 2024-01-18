@@ -33,7 +33,7 @@ const Pricing = () => {
 
   useEffect(() => {
     // 목표 시간 설정 (예: 3주차 수업 시간)
-    const targetTime = new Date('2024-01-17T22:00:00'); // YYYY-MM-DDTHH:MM:SS 형식
+    const targetTime = new Date('2024-01-18T14:00:00'); // YYYY-MM-DDTHH:MM:SS 형식
 
     const timer = setInterval(() => {
       const now = new Date();
